@@ -1,23 +1,141 @@
+:root {
+  --green-dark: #2e7d32;
+  --green-light: #a5d6a7;
+}
 
-    /*
-    Colors used
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
 
-    CSS HEX
-    --bright-pink-crayola: #ee4b6aff;
-    --pink: #f4b8c3ff;
-    --black: #010001ff;
-    --flax: #f2e47dff;
-    --arylide-yellow: #e6d460ff;
-    --mimi-pink: #fed7deff;
-    --red-cmyk: #ea261fff;
+  width: 650px;
+  justify-self: center;
 
-     CSS HSL
-    --bright-pink-crayola: hsla(349, 83%, 61%, 1);
-    --pink: hsla(349, 73%, 84%, 1);
-    --black: hsla(300, 100%, 0%, 1);
-    --flax: hsla(53, 82%, 72%, 1);
-    --arylide-yellow: hsla(52, 73%, 64%, 1);
-    --mimi-pink: hsla(349, 95%, 92%, 1);
-    --red-cmyk: hsla(2, 83%, 52%, 1);
+  font-family: "Arial", "Arial", sans-serif;
+  font-size: 14px;
 
-*/
+}
+
+h1, h2 {
+  background-color: var(--green-light);
+  color: var(--green-dark);
+}
+
+em {
+  background-color: var(--green-light);
+  color: var(--green-dark);
+
+  font-size: 15px;
+  font-style: normal;
+  padding: 10px;
+}
+
+img {
+  border-style: solid;
+  border-color: rgb(5, 73, 34);
+
+  float: right;
+}
+
+table {
+  border-style: groove;
+  border-width: 17px;
+  border-color: var(--green-light);
+}
+
+table tr td {
+  border-style: solid;
+  border-color: var(--green-light);
+  border-width: 1px;
+}
+
+p {
+  line-height: 1.8;
+}
+
+span {
+  border: 0px;
+}
+
+span[title="first evolution"] {
+  border-bottom: 2px solid var(--green-dark);
+  padding: 2px;
+}
+
+span[title="evolution 2"] {
+  border-bottom: 2px solid var(--green-dark);
+  border-right: 2px solid var(--green-dark);
+  padding: 2px;
+}
+
+span[title="evolution 3"] {
+  border-top: 2px solid var(--green-dark);
+  border-right: 2px solid var(--green-dark);
+  border-bottom: 2px solid var(--green-dark);
+  padding: 2px;
+}
+
+.evolution {
+  background-color: var(--green-light);
+  padding: 3px;
+  border-style: solid;
+  border-color: var(--green-dark);
+  border-top: 2px;
+  border-left: 2px;
+  margin-top: 50px;
+}
+
+.evolution li ul li {
+  color: rgb(4, 75, 29);
+}
+
+.evolution li {
+  margin-left: 40px;
+}
+
+#footer a {
+  letter-spacing: 1px;
+
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #e6d460ff;
+
+  text-decoration-thickness: 4px;
+  text-underline-offset: 5px;
+
+  color: rgb(61, 154, 185);
+}
+
+#footer a:hover {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+#pika2 {
+  width: 15%;
+}
+
+#pika1 {
+  width: 30%;
+}
+
+#pika1:hover {
+  border-color: #e6d460ff;
+}
+
+hr {
+  background-color: black;
+  height: 1px;
+}
+
+.cosplay, .cap, .partner, .gigantamax, .surfing, .flying {
+  background-color: var(--green-dark) !important;
+  color: white !important;
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+.pikachu-forms-title {
+  display: block;
+  margin-top: 40px;
+}
