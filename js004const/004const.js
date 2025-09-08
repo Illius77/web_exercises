@@ -19,3 +19,17 @@ arr[0] = 99;
 arr[1] = 'yo';
 // arr = [true, false];
 console.log(arr);
+
+const obj = {
+    name: 'Ronald',
+    age: 31
+};
+console.log(obj);
+
+obj.age = 99;
+console.log(obj);
+
+let nullissimus = null;
+console.log(nullissimus);
+
+console.info('Typeof nullissimus', typeof nullissimus);
