@@ -16,8 +16,5 @@ console.log(num !== true);
 // let arr = [0, 1, 2, 3];
 // console.log(arr == [0, 1, 2, 3]); // false, different references
 
-let obj = {
-    name: 'Ronald',
-    age: 33
-};
+;
 // console.log(obj);
