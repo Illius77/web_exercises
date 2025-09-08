@@ -18,3 +18,4 @@ console.log(num !== true);
 
 ;
 // console.log(obj);
+// console.log(obj);
