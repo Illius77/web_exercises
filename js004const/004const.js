@@ -29,7 +29,6 @@ console.log(obj);
 obj.age = 99;
 console.log(obj);
 
-let nullissimus = null;
-console.log(nullissimus);
+
 
 console.info('Typeof nullissimus', typeof nullissimus);
