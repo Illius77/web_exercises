@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <script>  
-            let random = Math.floor(Math.random() * 10);
-           
-            alert('Number guessing game');
-           
-            let userGuess = prompt('What is the magic number?');
-            console.log(random, userGuess);
-         </script>
+    <script>
+    let random = Math.floor(Math.random() * 10);
+    alert('Number guessing game! (Guess a number between 0 and 9)');
+
+    let userGuess;
+
+    do {
+        userGuess = prompt('What is the magic number?');
+        if (parseInt(userGuess) !== random) {
+            alert("❌ Wrong! Try again.");
+        }
+    } while (parseInt(userGuess) !== random);
+
+    alert("🎉 Correct! The magic number was: " + random);
+    </script>
 </head>
 <body>
     
