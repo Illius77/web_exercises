@@ -1,5 +1,7 @@
 let CONDITION_1 = false
 let CONDITION_2 = false;    
+
+console.log(CONDITION_1);
 if(CONDITION_1){
     console.log('CONDITION_1 was true, CONDITION_1 war richtig,  CONDITION_1 était vrai');
 }else if(CONDITION_2){
