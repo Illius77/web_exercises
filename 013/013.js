@@ -11,4 +11,7 @@ this.onload = ()=>{
     mySpan.textContent = "(span)";
     title.appendChild(mySpan);
    
-}
+    body.appendChild(title);
+    const nwanted = document.querySelector('em');
+    nwanted.remove();
+}   
