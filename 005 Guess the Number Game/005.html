@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    let random = Math.floor(Math.random() * 10);
+    alert('Number guessing game! (Guess a number between 0 and 9)');
+
+    let userGuess;
+    let attempts = 0;
+
+    do {
+        userGuess = prompt('What is the magic number? (0–9)');
+        let guessNumber = parseInt(userGuess);
+        attempts++;
+
+        if (isNaN(guessNumber)) {
+            alert("Please enter a valid number!");
+        } else if (guessNumber < 0 || guessNumber > 9) {
+            alert("The number must be between 0 and 9!");
+        } else if (guessNumber !== random) {
+            alert("Wrong! Try again.");
+        }
+    } while (parseInt(userGuess) !== random);
+
+    alert("Correct! The magic number was: " + random + 
+          "\nAttempts: " + attempts);
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
