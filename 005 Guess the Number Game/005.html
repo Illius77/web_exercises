@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-    let random = Math.floor(Math.random() * 10);
-    alert('Number guessing game! (Guess a number between 0 and 9)');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Number Guessing Game</title>
 
-    let userGuess;
-    let attempts = 0;
-
-    do {
-        userGuess = prompt('What is the magic number? (0–9)');
-        let guessNumber = parseInt(userGuess);
-        attempts++;
-
-        if (isNaN(guessNumber)) {
-            alert("Please enter a valid number!");
-        } else if (guessNumber < 0 || guessNumber > 9) {
-            alert("The number must be between 0 and 9!");
-        } else if (guessNumber !== random) {
-            alert("Wrong! Try again.");
-        }
-    } while (parseInt(userGuess) !== random);
-
-    alert("Correct! The magic number was: " + random + 
-          "\nAttempts: " + attempts);
-</script>
-
+  <link rel="stylesheet" href="005.css">
+  <script src="005.js" defer></script>
 </head>
 <body>
-    
+  <h1>Magic Number Guessing Game</h1>
+  <div id="game-container">
+    <p id="instructions">Loading game...</p>
+    <input type="number" id="userGuess" placeholder="Enter number">
+    <br>
+    <button id="submit">Guess</button>
+    <p id="feedback"></p>
+    <p id="tries-info"></p>
+    <button id="play-again">Play Again</button>
+  </div>
 </body>
 </html>
