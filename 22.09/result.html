@@ -1,23 +1,92 @@
 <!DOCTYPE html>
 <html>
-<body>
-  <h1>Your Choice</h1>
-  <p id="result"></p>
-
+<head>
+  <title>Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #444;
+    }
+    #result {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    button {
+      padding: 10px 20px;
+      background: #666;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #444;
+    }
+  </style>
   <script>
+    window.onload = () => {
+      const params = new URLSearchParams(window.location.search);
+      const username = params.get("name") || "Guest";
+      const vote = params.get("choice") || "nothing";
+      const vote2 = params.get("choice2") || "nothing";
 
-    const params = new URLSearchParams(window.location.search);
-    const name = params.get("name") || "Guest";
-    const choice = params.get("choice") || "nothing";
-    const choice2 = params.get("choice2") || "nothing";
+      let myClass = "";
+      let myClass2 = "";
 
-    document.getElementById("result").textContent =
-      `Thank you, ${name}! You chose: ${choice} and ${choice2}.`;
+      switch (vote) {
+        case "Sony WH-1000XM4": myClass = "green"; break;
+        case "Bose QC45": myClass = "red"; break;
+        case "Sennheiser HD 560S": myClass = "blue"; break;
+        case "Audio-Technica M50xBT": myClass = "orange"; break;
+        default: myClass = "gray";
+      }
+
+      if (vote2 === "Anker Soundcore Life Q30") {
+        myClass2 = "budget";
+      } else if (vote2 === "Sony WH-CH510") {
+        myClass2 = "light";
+      } else if (vote2 === "Audio-Technica ATH-M20x") {
+        myClass2 = "studio";
+      } else if (vote2 === "JBL Tune 510BT") {
+        myClass2 = "bass";
+      } else {
+        myClass2 = "error";
+      }
+
+      const result = document.getElementById("result");
+      result.textContent = `Thank you, ${username}! You chose: ${vote} and ${vote2}.`;
+      result.className = myClass + " " + myClass2;
+    };
   </script>
-
-  <br/>
-  <button onclick="window.location.href='index.html'">
-    Choose again
-  </button>
+</head>
+<body>
+  <div class="container">
+    <h1>Your Choice</h1>
+    <p id="result"></p>
+    <button onclick="window.location.href='demo.html'">Choose again</button>
+  </div>
 </body>
 </html>

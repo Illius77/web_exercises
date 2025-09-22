@@ -1,28 +1,88 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>The Best Headphones</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background: #f5f5f5;
+          color: #333;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          margin: 0;
+        }
+        .container {
+          background: #fff;
+          border: 1px solid #ccc;
+          padding: 30px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+          max-width: 400px;
+          width: 100%;
+        }
+        h1 {
+          font-size: 22px;
+          margin-bottom: 20px;
+          text-align: center;
+          color: #444;
+        }
+        label, p {
+          font-size: 14px;
+          margin: 8px 0;
+        }
+        input[type="text"], select {
+          width: 100%;
+          padding: 8px;
+          margin: 5px 0 15px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          background: #fafafa;
+        }
+        input[type="radio"] {
+          margin-right: 6px;
+        }
+        input[type="submit"] {
+          width: 100%;
+          padding: 10px;
+          background: #666;
+          border: none;
+          border-radius: 4px;
+          color: #fff;
+          font-size: 15px;
+          cursor: pointer;
+          transition: background 0.3s;
+        }
+        input[type="submit"]:hover {
+          background: #444;
+        }
+      </style>
+      
+      </head>
       <body>
-        <h1>The best headphones</h1>
-
+        <div class="container">
+          <h1>The Best Headphones</h1>
           <form action="result.html" method="get">
-              Your Name:
-              <input type="text" name="name" /><br/>
+            <label>Your Name:</label>
+            <input type="text" name="name" required />
 
-              <p>Choose headphones under $300:</p>
-              <label><input type="radio" name="choice" value="Sony WH-1000XM4"> Sony WH-1000XM4</label><br/>
-              <label><input type="radio" name="choice" value="Bose QC45"> Bose QuietComfort 45</label><br/>
-              <label><input type="radio" name="choice" value="Sennheiser HD 560S"> Sennheiser HD 560S</label><br/>
-              <label><input type="radio" name="choice" value="Audio-Technica M50xBT"> Audio-Technica ATH-M50xBT</label><br/><br/>
+            <p>Choose headphones under $300:</p>
+            <label><input type="radio" name="choice" value="Sony WH-1000XM4"> Sony WH-1000XM4</label><br/>
+            <label><input type="radio" name="choice" value="Bose QC45"> Bose QuietComfort 45</label><br/>
+            <label><input type="radio" name="choice" value="Sennheiser HD 560S"> Sennheiser HD 560S</label><br/>
+            <label><input type="radio" name="choice" value="Audio-Technica M50xBT"> Audio-Technica ATH-M50xBT</label><br/>
 
-              <p>Choose headphones under $100:</p>
-              <select name="choice2">
-                 <option value="Anker Soundcore Life Q30">Anker Soundcore Life Q30</option>
-                 <option value="Sony WH-CH510">Sony WH-CH510</option>
-                 <option value="Audio-Technica ATH-M20x">Audio-Technica ATH-M20x</option>
-                 <option value="JBL Tune 510BT">JBL Tune 510BT</option>  
-              </select><br/><br/>
-              
+            <p>Choose headphones under $100:</p>
+            <select name="choice2">
+              <option value="Anker Soundcore Life Q30">Anker Soundcore Life Q30</option>
+              <option value="Sony WH-CH510">Sony WH-CH510</option>
+              <option value="Audio-Technica ATH-M20x">Audio-Technica ATH-M20x</option>
+              <option value="JBL Tune 510BT">JBL Tune 510BT</option>
+            </select>
 
-              <input type="submit" value="Submit"></input><br/>
+            <input type="submit" value="Submit">
           </form>
-      </body>
+        </div>
+</body>
 </html>
