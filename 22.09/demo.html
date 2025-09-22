@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,7 +59,21 @@
           background: #444;
         }
       </style>
-      
+      <script>
+    window.onload = () => {
+      const myForm = document.querySelector('#myForm');
+      myForm.onsubmit = (e) => {
+        const isAdult = document.querySelector('#isadult');
+        const usernameInput = document.querySelector('#username');
+        if (usernameInput.value == "") {
+          usernameinput.classList.add ("error");
+          alert("Please tell us your name!");
+          return false;
+        }
+        return true;
+      };
+    };
+  </script>
       </head>
       <body>
         <div class="container">
