@@ -61,15 +61,19 @@
       </style>
       <script>
     window.onload = () => {
-      const myForm = document.querySelector('#myForm');
-      myForm.onsubmit = (e) => {
-        const isAdult = document.querySelector('#isadult');
-        const usernameInput = document.querySelector('#username');
-        if (usernameInput.value == "") {
-          usernameinput.classList.add ("error");
-          alert("Please tell us your name!");
-          return false;
-        }
+  const myForm = document.querySelector('#myForm');
+
+    myForm.onsubmit = (e) => {
+        console.log(e);
+        const targetElement = e.target;
+    const isAdult = document.querySelector('#isadult');
+    const usernameInput = document.querySelector('#username');
+
+    if (usernameInput.value.trim() === "") {
+      usernameInput.classList.add("error");
+      alert("Please tell us your name!");
+      return false;
+    }
         return true;
       };
     };
