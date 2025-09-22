@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Your Choice</h1>
+  <p id="result"></p>
+
+  <script>
+
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name") || "Guest";
+    const choice = params.get("choice") || "nothing";
+    const choice2 = params.get("choice2") || "nothing";
+
+    document.getElementById("result").textContent =
+      `Thank you, ${name}! You chose: ${choice} and ${choice2}.`;
+  </script>
+
+  <br/>
+  <button onclick="window.location.href='index.html'">
+    Choose again
+  </button>
+</body>
+</html>
