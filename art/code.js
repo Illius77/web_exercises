@@ -10,8 +10,8 @@ const timeout2 = 500; //EDIT
 const timeout3 = 500; //EDIT
   const primary = "&n7577;"; // Initial char.
 // First 
-const center = ['@', '®', '©',]; //EDIT
-const tertiary = ['.', '°']; //EDIT
+const center = ['@', '!', '©',]; //EDIT
+const tertiary = ['.', '&']; //EDIT
 const secondary = ['\\', '/', '|','&boxv;','&boxh;','&boxvl;','&boxvl;','&boxhd;','&boxhu;']; //EDIT
 const max = 2; // First circle around center.
 const max2 = 3; // 2nd circle around center.
